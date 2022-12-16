@@ -20,17 +20,17 @@ h2 {
     color: #005807;
 }
 
-p {
+article {
     text-align: justify;
     font-size: large;
 }
 
 .photo{
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    /* margin: 10px; */
+    margin: 10px;
     flex-direction: row;
 
 
@@ -43,12 +43,13 @@ p {
 
     /* пустить контент вторым рядом */
     flex-wrap: wrap;
-    /* max-width: 100%; */
+    max-width: 100vh;
+    max-height: 50vh;
 }
 
 .photo > img {
     max-width: 50vh;
-    min-height: 20vh;
+    min-height: 50vh;
     margin: 10px;
     
 }
@@ -77,4 +78,35 @@ p {
     justify-content: space-around;
 }
 
+
+.grid-wrapper{
+    display: grid;
+    /* адаптивный грид */
+    /* с фиксированной шириной пикселей */
+    /* grid-template-columns: repeat(auto-fit, 200px); */
+    /* с адаптируемой шириной */
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 2fr)); */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 0fr;
+    grid-gap: 2vw;
+
+    font-weight: bold;
+}
+
+.grid-item {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+/* .occupation {
+    background-color: rgb(161, 48, 48);
+}
+
+.company {
+    background-color: rgb(49, 163, 68);
+} */
+
+.working-period {
+    text-align: right;
+}
 
