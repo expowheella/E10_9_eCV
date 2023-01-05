@@ -25,7 +25,7 @@ article {
     font-size: large;
 }
 
-.photo{
+.photo {
     /* min-height: 100vh; */
     display: flex;
     align-items: flex-start;
@@ -34,32 +34,43 @@ article {
     flex-direction: row;
 
 
-    /* растянуть flexbox, если контент не влез */
-    min-width: fit-content;
-    
+
+
 
     /* прокрутка вбок, если не контент не влез */
     /* overflow: auto; */
 
     /* пустить контент вторым рядом */
     flex-wrap: wrap;
-    max-width: 100vh;
-    max-height: 50vh;
+    /* max-width: 100%; */
+    max-height: fit-content;
+    /* min-height: fit-content; */
+
+    /* растянуть flexbox, если контент не влез */
+    /* min-width: fit-content; */
+    max-width: fit-content;
 }
 
-.photo > img {
-    max-width: 50vh;
-    min-height: 50vh;
+.photo>img {
     margin: 10px;
-    
+    justify-content: space-around;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 430px;
+
 }
 
 .content {
     flex-direction: column;
     align-content: center;
+    
     /* max-width: min-content; */
-    /* min-width: fit-content; */
+    flex-wrap: wrap;
+
+    /* при ширине менее min-width пустить вторым рядом */
+    min-width: 400px;
     display: flex;
+
     /* align-items: flex-start; */
     /* justify-content: center; */
     margin: 10px;
@@ -79,7 +90,7 @@ article {
 }
 
 
-.grid-wrapper{
+.grid-wrapper {
     display: grid;
     /* адаптивный грид */
     /* с фиксированной шириной пикселей */
@@ -109,4 +120,3 @@ article {
 .working-period {
     text-align: right;
 }
-
